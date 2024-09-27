@@ -106,9 +106,14 @@ export const KahootProvider = ({ children }) => {
 
 
     const onSubmit = (data) => {
-        const { autor, time, nombreTest, ...dataFilter } = data
-        setPreguntasArray([...preguntasArray, dataFilter])
-        handleClose()
+        if (getValues("respuestaCorrecta")) {
+            const { autor, time, nombreTest, ...dataFilter } = data
+            setPreguntasArray([...preguntasArray, dataFilter])
+            handleClose()
+        } else {
+            alert('Seleccione una repuesta correcta')
+        }
+
     }
 
     const eliminar = (index) => {
@@ -124,6 +129,11 @@ export const KahootProvider = ({ children }) => {
         navigator.clipboard.writeText(`${window.location}game/${code}`)
     }
 
+    const handleDelete = (index) => {
+        const guardar = obtener.filter((item, i) => i !== index)
+        localStorage.setItem('tests', JSON.stringify(guardar))
+        setPreguntasArray(guardar)
+    }
 
 
 
@@ -184,7 +194,9 @@ export const KahootProvider = ({ children }) => {
                 setValue,
                 getValues,
                 reset,
-                formState: { errors }
+                formState: { errors },
+                handleDelete,
+
             }}>
                 {children}
             </KahootContext.Provider>

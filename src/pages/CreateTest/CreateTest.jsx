@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
-import { Button, Col, Container, Form, Modal, NavLink, Row, Table } from "react-bootstrap";
+import { useContext } from "react";
+import { Button, Col, Container, Form, Modal, Row, Table } from "react-bootstrap";
 import InputRespuestas from "../../conponents/inputRepuestas/InputRespuestas";
-import { Controller, useForm } from "react-hook-form";
+import { Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { KahootContext } from "../../context";
 
@@ -14,8 +14,6 @@ const CreateTest = () => {
     const {
         show,
         active,
-        setActive,
-        setShow,
         preguntasArray,
         setPreguntasArray,
         handleClose,

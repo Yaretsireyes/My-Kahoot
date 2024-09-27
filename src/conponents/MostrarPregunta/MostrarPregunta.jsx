@@ -49,30 +49,29 @@ const MostrarPregunta = () => {
                 !finish && (
                     <Container>
                         <Temporizador time={test?.time} setFinish={setFinish} />
-                        <h1 className="text-center mt-5 text-decoration-underline">{test?.preguntasArray[siguiente]?.pregunta}</h1>
+                        <h1 className="text-center mt-5 text-decoration-underline text-white">{test?.preguntasArray[siguiente]?.pregunta}</h1>
                         <Container>
                             <Row className=" text-center gap-4 mt-5">
                                 <Col md={12} className="d-flex justify-content-center gap-4 ">
                                     <Button variant="danger" size="lg" style={{ width: '28rem' }} onClick={() => handleButton(test?.preguntasArray[siguiente]?.respuesta1)}>
-                                        <i className="bi bi-caret-up fs-3 icon-kahoot"></i>
                                         {test?.preguntasArray[siguiente]?.respuesta1}
+                                        <i className="bi bi-caret-up fs-1 icon-kahoot"></i>
                                     </Button>
 
                                     <Button variant="primary" size="lg" style={{ width: '28rem' }} onClick={() => handleButton(test?.preguntasArray[siguiente]?.respuesta2)}>
-                                        <i className="bi bi-diamond fs-3 icon-kahoot"></i>
                                         {test?.preguntasArray[siguiente]?.respuesta2}
+                                        <i className="bi bi-diamond fs-3 icon-kahoot"></i>
                                     </Button>
 
                                 </Col>
                                 <Col md={12} className="d-flex justify-content-center gap-4">
                                     <Button variant="warning" size="lg" style={{ width: '28rem' }} onClick={() => handleButton(test?.preguntasArray[siguiente]?.respuesta3)}>
-                                        <i className="bi bi-circle fs-3 icon-kahoot"></i>
                                         {test?.preguntasArray[siguiente]?.respuesta3}
-
+                                        <i className="bi bi-circle fs-3 icon-kahoot"></i>
                                     </Button>
                                     <Button variant="success" size="lg" style={{ width: '28rem' }} onClick={() => handleButton(test?.preguntasArray[siguiente]?.respuesta4)}>
-                                        <i className="bi bi-square fs-3 icon-kahoot"></i>
                                         {test?.preguntasArray[siguiente]?.respuesta4}
+                                        <i className="bi bi-square fs-3 icon-kahoot"></i>
                                     </Button>
                                 </Col>
                             </Row>

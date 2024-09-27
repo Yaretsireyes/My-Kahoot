@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect} from "react";
 import MostrarPregunta from "../../conponents/MostrarPregunta/MostrarPregunta";
 import { Container } from "react-bootstrap";
 import { KahootContext } from "../../context";
@@ -40,7 +40,7 @@ const StartGame = () => {
                         <>
                             <div style={{ width: '100%', height: '811px' }}>
                                 <div className="loader">
-                                    <h1>{count}</h1>
+                                    <h1 className="text-white">{count}</h1>
                                 </div>
                             </div>
                         </>

@@ -1,6 +1,6 @@
 import { Form, InputGroup } from "react-bootstrap";
 
-const InputRespuestas = ({ active, name, onChange, onChangeTwo, nameRadio, inputRef}) => {
+const InputRespuestas = ({ active, onChange, onChangeTwo, nameRadio, inputRef}) => {
     return (
         <>
             <InputGroup>

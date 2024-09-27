@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import { Button, Container, Table } from "react-bootstrap";
+import { useContext } from "react";
+import { Button, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { KahootContext } from "../../context";
 
@@ -10,6 +10,7 @@ const LayoutAdmin = () => {
         obtener,
         /*Funciones*/
         CopyLink,
+        handleDelete
     } = useContext(KahootContext)
 
 
@@ -43,7 +44,10 @@ const LayoutAdmin = () => {
                                         <td>{item.autor}</td>
                                         <td>{item.preguntasArray.length}</td>
                                         <td>{item.codigo}</td>
-                                        <td><Button onClick={() => CopyLink(item.codigo)} variant={"outline-success"}>CopyLink</Button></td>
+                                        <td className="d-flex flex-row justify-content-center gap-2">
+                                            <Button onClick={() => CopyLink(item.codigo)} variant={"outline-success"}>CopyLink</Button>
+                                            <Button onClick={() => handleDelete(index)} variant={"outline-info"}>Delete</Button>
+                                        </td>
                                     </tr>
                                 ))
                             }
