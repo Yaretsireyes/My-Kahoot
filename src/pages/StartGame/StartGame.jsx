@@ -38,8 +38,10 @@ const StartGame = () => {
                 {
                     showTrue && (
                         <>
-                            <div className="loader">
-                                <h1>{count}</h1>
+                            <div style={{ width: '100%', height: '811px' }}>
+                                <div className="loader">
+                                    <h1>{count}</h1>
+                                </div>
                             </div>
                         </>
                     )

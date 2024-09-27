@@ -14,6 +14,8 @@ const CreateTest = () => {
     const {
         show,
         active,
+        setActive,
+        setShow,
         preguntasArray,
         setPreguntasArray,
         handleClose,
@@ -31,6 +33,7 @@ const CreateTest = () => {
 
 
 
+
     const handleCreateTest = (data) => {
         const { autor, time, nombreTest } = data
         if (preguntasArray.length <= 0) {
@@ -44,7 +47,6 @@ const CreateTest = () => {
                 preguntasArray,
             }
             const tests = JSON.parse(localStorage.getItem('tests'))
-
             if (tests) {
                 tests.push(guardar)
                 localStorage.setItem('tests', JSON.stringify(tests))
@@ -57,6 +59,7 @@ const CreateTest = () => {
             navigate('/')
         }
     }
+
 
 
     return (

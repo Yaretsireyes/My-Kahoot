@@ -27,9 +27,7 @@ export const KahootProvider = ({ children }) => {
     const [active, setActive] = useState({ respuesta1: true, respuesta2: true, respuesta3: true, respuesta4: true })
     const [preguntasArray, setPreguntasArray] = useState([])
 
-    /*Pages LayoutAdmin*/
-    const [obtener, setObtener] = useState(JSON.parse(localStorage.getItem('tests')))
- 
+
     /*Pages LaoyutClient*/
     const [notFount, setNotFount] = useState(false)
     const [testObjeto, setTestObjeto] = useState({})
@@ -105,6 +103,8 @@ export const KahootProvider = ({ children }) => {
         onChange(event.target.value)
     }
 
+
+
     const onSubmit = (data) => {
         const { autor, time, nombreTest, ...dataFilter } = data
         setPreguntasArray([...preguntasArray, dataFilter])
@@ -118,6 +118,8 @@ export const KahootProvider = ({ children }) => {
 
 
     /*LayoutAdmin*/
+    const obtener = JSON.parse(localStorage.getItem('tests'))
+
     const CopyLink = (code) => {
         navigator.clipboard.writeText(`${window.location}game/${code}`)
     }
@@ -157,7 +159,6 @@ export const KahootProvider = ({ children }) => {
                 setPreguntasArray,
                 /*Pages LayourAdmin*/
                 obtener,
-                setObtener,
                 /*Pages LayoutClient*/
                 notFount,
                 setNotFount,

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Button, Table } from "react-bootstrap";
+import { Button, Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { KahootContext } from "../../context";
 
@@ -9,13 +9,14 @@ const LayoutAdmin = () => {
         /*Estados*/
         obtener,
         /*Funciones*/
-        CopyLink
+        CopyLink,
     } = useContext(KahootContext)
+
 
 
     return (
         <>
-            <div className="container pt-5 bg-black mt-5 text-center">
+            <div className="container pt-5 mt-5 text-center">
                 <div className="d-flex justify-content-end">
                     <Link className="btn btn-outline-info mb-3" to='/create'>Crear Test</Link>
                 </div>
@@ -32,7 +33,7 @@ const LayoutAdmin = () => {
                                 <th>Opciones</th>
                             </tr>
                         </thead>
-                        <tbody className="">
+                        <tbody>
                             {
                                 obtener?.map((item, index) => (
                                     <tr key={index}>

@@ -7,3 +7,11 @@
 .icon-kahoot{
     margin-right: 22rem;
 }
+
+.container-icons{
+    width: 500px;
+    background-color: rgb(189, 185, 185);
+    margin-top: 10rem;
+    margin-left: 20rem;
+    border-radius: 20px;
+}

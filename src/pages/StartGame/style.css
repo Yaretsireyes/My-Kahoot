@@ -1,12 +1,11 @@
-/* From Uiverse.io by bek_uz_time */
 .loader {
     position: relative;
-    width: 180px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background: transparent;
     border-radius: 30%;
     box-shadow: 25px 25px 75px rgba(0, 0, 0, 1.55);
-    border: 1px solid #ecc904;
+    border: 1px solid #e6ca2e;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +19,7 @@
     position: absolute;
     inset: 20px;
     background: transparent;
-    border: 1px dashed #b0a1a1;
+    border: 1px dashed #e14545;
     border-radius: 30%;
     box-shadow: inset -5px -5px 25px rgba(0, 10, 10, 15),
         inset 5px 5px 35px rgba(10, 0, 10, 2);

@@ -1,8 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import './style.css'
 import { KahootContext } from "../../context";
+import { NavLink } from "react-router-dom";
 
 const Temporizador = ({ time, setFinish }) => {
+
 
     const {
         hours,
@@ -47,20 +49,27 @@ const Temporizador = ({ time, setFinish }) => {
 
     return (
         <>
-            <div className="hourglassBackground ">
-                <div className="hourglassContainer">
-                    <div className="hourglassCurves"></div>
-                    <div className="hourglassCapTop"></div>
-                    <div className="hourglassGlassTop"></div>
-                    <div className="hourglassSand"></div>
-                    <div className="hourglassSandStream"></div>
-                    <div className="hourglassCapBottom"></div>
-                    <div className="hourglassGlass"></div>
+            <div className="container-fluid">
+                <div className="mt-5">
+                    <NavLink to='/' className='navLink text-black text-decoration-none '>
+                        Home
+                    </NavLink>
                 </div>
-            </div>
-            <div  className="text-center mt-5 fs-1 fst-italic">
-                <i className="bi bi-hourglass-split "></i>
-                {`${hours}: ${minutes}: ${seconds}`}
+                <div className="hourglassBackground ">
+                    <div className="hourglassContainer">
+                        <div className="hourglassCurves"></div>
+                        <div className="hourglassCapTop"></div>
+                        <div className="hourglassGlassTop"></div>
+                        <div className="hourglassSand"></div>
+                        <div className="hourglassSandStream"></div>
+                        <div className="hourglassCapBottom"></div>
+                        <div className="hourglassGlass"></div>
+                    </div>
+                </div>
+                <div className="temporizador text-center fs-1 fst-italic ">
+                    <i className="bi bi-hourglass-split "></i>
+                    {`${hours}: ${minutes}: ${seconds}`}
+                </div>
             </div>
         </>
     );

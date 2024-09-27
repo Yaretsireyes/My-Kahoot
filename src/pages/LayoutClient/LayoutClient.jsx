@@ -8,6 +8,7 @@ import { KahootContext } from "../../context";
 const LayoutClient = () => {
 
     const {
+        /*Estados*/
         preguntas,
         notFount,
         setNotFount,
@@ -28,7 +29,6 @@ const LayoutClient = () => {
         }
     }, [])
 
-
     const start = () => {
         navigate(`/game/${codigo}/start`)
     }
@@ -44,10 +44,11 @@ const LayoutClient = () => {
                     </div>
                 </>
             }
+
             {
                 !notFount && (
                     <div className="d-flex flex-column align-items-center justify-content-center container-kahoot">
-                        <h1 className="text-kahoot">Welcome to Kahot Chango!</h1>
+                        <h1 className="text-kahoot ms-5">Welcome to Kahot Chango!</h1>
                         <div className="container-propiedades">
                             <div className="card mt-5" style={{ width: '25rem', height: '16rem' }}>
                                 <p className="autor-kahoot">The Autor Game is:{testObjeto?.autor} </p>
